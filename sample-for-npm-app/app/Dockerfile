@@ -1,4 +1,4 @@
-FROM node:11.9.0-alpine
+FROM node:lts-alpine
 
 # timezone設定
 RUN apk --update add tzdata && \
