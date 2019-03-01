@@ -6,7 +6,8 @@ RUN apk --update add tzdata && \
     apk del tzdata && \
     rm -rf /var/cache/apk/*
 
-RUN apk add openssh vim
+# 必要パッケージをインストール
+RUN apk add vim
 
 EXPOSE 8080
 
