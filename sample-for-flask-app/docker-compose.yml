@@ -1,0 +1,15 @@
+version: "3"
+services:
+  sample:
+    build: ./flask
+    container_name: "flask"
+    tty: true
+    environment:
+      FLASK_APP: api
+      FLASK_ENV: local
+      # ファイル自動読み込み設定
+      FLASK_DEBUG: 1
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask:/opt/flask
